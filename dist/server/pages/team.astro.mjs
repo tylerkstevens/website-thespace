@@ -1,10 +1,10 @@
 /* empty css                                 */
 import { c as createComponent, r as renderTemplate, a as renderComponent, F as Fragment, m as maybeRenderHead } from '../chunks/astro/server_BWzcCOCd.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../chunks/_astro_content_CqApwHla.mjs';
+import { g as getCollection } from '../chunks/_astro_content_97JUDMtS.mjs';
 import '@astrojs/internal-helpers/path';
 import { $ as $$Picture } from '../chunks/_astro_assets_IDNk06b-.mjs';
-import { $ as $$Container, a as $$Layout } from '../chunks/Layout_obBZJ6Ds.mjs';
+import { $ as $$Container, a as $$Layout } from '../chunks/Layout_BYln0S3y.mjs';
 import { $ as $$Sectionhead } from '../chunks/sectionhead_xozOFx5b.mjs';
 /* empty css                                */
 export { renderers } from '../renderers.mjs';

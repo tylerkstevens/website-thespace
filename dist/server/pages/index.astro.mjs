@@ -1,7 +1,7 @@
 /* empty css                                 */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent, b as addAttribute } from '../chunks/astro/server_BWzcCOCd.mjs';
 import 'kleur/colors';
-import { b as $$Link, $ as $$Container, a as $$Layout } from '../chunks/Layout_obBZJ6Ds.mjs';
+import { b as $$Link, $ as $$Container, a as $$Layout } from '../chunks/Layout_BYln0S3y.mjs';
 /* empty css                                 */
 import { $ as $$Icon } from '../chunks/Icon_gYVaCojS.mjs';
 import '@astrojs/internal-helpers/path';
