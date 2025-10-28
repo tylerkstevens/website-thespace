@@ -1,9 +1,9 @@
 /* empty css                                 */
 import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead, F as Fragment, b as addAttribute } from '../chunks/astro/server_BWzcCOCd.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../chunks/_astro_content_CqApwHla.mjs';
+import { g as getCollection } from '../chunks/_astro_content_97JUDMtS.mjs';
 import { $ as $$Icon } from '../chunks/Icon_gYVaCojS.mjs';
-import { $ as $$Container, b as $$Link, a as $$Layout } from '../chunks/Layout_obBZJ6Ds.mjs';
+import { $ as $$Container, b as $$Link, a as $$Layout } from '../chunks/Layout_BYln0S3y.mjs';
 import { $ as $$Sectionhead } from '../chunks/sectionhead_xozOFx5b.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
