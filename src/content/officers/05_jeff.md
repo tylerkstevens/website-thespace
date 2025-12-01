@@ -1,11 +1,10 @@
 ---
-draft: false
-name: "Jeff B."
-title: "Chief Technical Officer"
-bio: "Linux Systems Architect"
+draft: Owen A."
+title: "Executive Director"
+bio: "Graduate of CU Boulder | Bitcoiner"
 avatar: {
     src: "/assets/headshots/jeff.jpeg",
-    alt: "Jeff B."
+    alt: "Owen A."
 }
 publishDate: "2024-07-14 15:39"
 ---
