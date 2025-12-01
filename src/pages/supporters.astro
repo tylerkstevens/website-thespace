@@ -157,6 +157,34 @@ const sponsorPlan = {
         <PricingCard plan={sponsorPlan} />
       </div>
     </div>
+
+    <!-- Current Supporters Section -->
+    <div class="current-supporters-container grid md:grid-cols-1 lg:grid-cols-2 gap-6 mx-auto max-w-6xl mt-12 mb-12 px-4 lg:px-0">
+      <!-- Current Supporters Grid -->
+      <div class="order-2 md:order-1 flex flex-col gap-3">
+        <h2 class="font-bold text-center text-3xl mb-12 text-gray-800">Current Supporters</h2>
+        <div class="sponsors-grid">
+          {foundingSponsors.map((sponsor) => (
+            <a href={sponsor.data.url} target="_blank" rel="noopener noreferrer" class="block">
+              <div class="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto">
+                <img src={sponsor.data.avatar?.src || '/default-event-image.webp'}
+                  loading="lazy"
+                  alt={sponsor.data.avatar.alt || 'Sponsor Image'}
+                  class="sponsor-logo"
+                  width="192"
+                  height="192"
+                />
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Sponsor Us Tile -->
+      <div class="order-2 md:order-1 mt-12 md:mb-8 max-w-md mx-auto">
+        <PricingCard plan={sponsorPlan} />
+      </div>
+    </div>
   
     <!-- Donate to The Space Button -->
     <div class="flex justify-center mt-0 mb-4">
