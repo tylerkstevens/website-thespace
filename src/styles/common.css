@@ -41,28 +41,30 @@
 
 /* Sponsors grid layout */
 .sponsors-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 
 @media (min-width: 1024px) {
   .sponsors-grid {
-    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .sponsors-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 767px) {
   .sponsors-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
