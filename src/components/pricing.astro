@@ -4,7 +4,7 @@ import Link from "@components/ui/link.astro";
 
 const { plan } = Astro.props;
 const isComingSoon = plan.name !== "Public" && plan.name !== "Voting Membership" && plan.name !== "Co-Working" && plan.name !== "Monthly Supporter" && plan.name !== "Become a Sponsor" && plan.name !== "Day Pass" && plan.name !== "Private Office";
-const isMainOption = plan.name === "Social" || plan.name === "Co-Working" || plan.name === "Private Office";
+const isMainOption = plan.name === "Voting Membership" || plan.name === "Co-Working" || plan.name === "Private Office";
 const isSponsorCard = plan.name === "Become a Sponsor";
 const isLowerTier = ["Public", "Day Pass", "Monthly Supporter"].includes(plan.name);
 ---
