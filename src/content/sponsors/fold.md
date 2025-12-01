@@ -2,7 +2,7 @@
 draft: false
 name: "Learn More"
 title: "Fold"
-url: "https://example.com"
+url: "https://foldapp.com/"
 avatar: {
     src: "/assets/sponsors/FoldLogo.webp",
     alt: "Fold"
