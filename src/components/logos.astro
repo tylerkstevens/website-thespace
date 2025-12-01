@@ -62,7 +62,7 @@ const getFileFormat = (src: string) => {
     })}
   </div>
 
-  <h2 class="text-center text-white px-12 mt-12">Current Supporters</h2>
+  <h2 class="text-center text-white px-12 mt-12 mb-4">Current Supporters</h2>
   <div class="sponsors-grid mt-10 mb-2">
     {currentSponsors.map(sponsor => {
       const format = getFileFormat(sponsor.data.avatar?.src || '');
