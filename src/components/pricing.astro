@@ -24,7 +24,7 @@ const isLowerTier = ["Public", "Day Pass", "Monthly Supporter"].includes(plan.na
       )}
     </div>
     <div class="flex-grow flex flex-col justify-start">
-      <ul class="space-y-4">
+      <ul class="space-y-4 mx-auto">
         {plan.features.map((item) => (
           <li class={`flex items-start gap-3 ${isLowerTier ? 'text-black' : 'text-white'}`}>
             <div class="w-6 h-6 mt-1 flex-shrink-0">
