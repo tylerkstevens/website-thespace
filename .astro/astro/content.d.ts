@@ -200,9 +200,9 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "officers": {
-"01_owen.md": {
-	id: "01_owen.md";
-  slug: "01_owen";
+"01_joel.md": {
+	id: "01_joel.md";
+  slug: "01_joel";
   body: string;
   collection: "officers";
   data: InferEntrySchema<"officers">
