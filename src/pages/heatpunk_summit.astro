@@ -1,399 +1,1436 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Link from "@components/ui/link.astro";
 ---
 
-<Layout title="Heatpunk Summit">
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-r from-gray-900 to-black text-white py-20">
-    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('/assets/events/heatpunk_summit_2026/heatpunk_trojanhorse.png');"></div>
-    <Container class="relative z-10 text-center">
-      <Sectionhead>
-        <Fragment slot="title">HEATPUNK SUMMIT</Fragment>
-        <Fragment slot="desc"><span class="text-white">February 27th & 28th, 2026</span></Fragment>
-      </Sectionhead>
-      <div class="mt-8">
-        <Link href="mailto:admin@heatpunks.org" style="custom" size="lg" class="bg-orange-500 text-black hover:bg-orange-600 transition-colors duration-300">
-          Request Invitation
-        </Link>
-      </div>
-      <div class="mt-6">
-        <Link href="https://conference.denver.space/undermine-2025/talk/" style="custom" size="lg" class="bg-orange-500 text-black hover:bg-orange-600 transition-colors duration-300">
-          Schedule Coming Soon (See Last Year's)
-        </Link>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Description Section -->
-  <section class="py-16 bg-white">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-6 text-center">Overview</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-xl text-gray-700 leading-relaxed">
-          The Heatpunk Summit brings together all key stakeholders pushing forward the emerging industry of hashrate heating. The Heatpunks are a group of bitcoiners undermining the status-quo, striving to bring hashrate back home - into heating appliances and infrastructure. Over three days you will:
-        </p>
-        <ul class="list-disc pl-8 mt-6 text-gray-700 space-y-2">
-          <li class="text-lg">Discuss and learn current innovations, challenges and trends</li>
-          <li class="text-lg">Get hands on time with leading hashrate heating hardware</li>
-          <li class="text-lg">Build relationships with key stakeholders changing the mining status-quo</li>
-        </ul> 
-        <p class="text-xl mt-6 text-gray-700 leading-relaxed font-semibold text-center">
-          ASIC Designers, FOSS Developers, Firmware Builders, Control Experts, Heating Industry Veterans, Plumbers, HVAC Techs, Home Insurers, System Builders, Pleb Miners and more - All in the Same Room.
-        </p>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Last Year's Recap Section -->
-  <section class="py-16 bg-gray-100">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-6 text-center">Last Year's Recap</h2>
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-xl text-gray-700 leading-relaxed">
-          Missed last year? Check out highlights from the Inaugural Heatpunk Summit.
-        </p>
-        <div class="mt-6">
-          <Link href="https://www.youtube.com/watch?v=c-NrYzmPRv8" target="_blank" style="primary" size="lg">
-            Watch the 2025 Summit Recap
-          </Link>
+<Layout title="Heatpunk Summit 2026 | Denver">
+  <div class="heatpunk-page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="noise-overlay"></div>
+      <div class="scan-lines"></div>
+      <div class="hero-content">
+        <div class="glitch-container">
+          <h1 class="hero-title" data-text="HEATPUNK">HEATPUNK SUMMIT</h1>
+          <h2 class="hero-subtitle">SUMMIT_2026</h2>
+        </div>
+        <p class="hero-tagline">// UNDERMINING THE STATUS QUO</p>
+        <div class="hero-meta">
+          <span class="meta-item"><span class="label">DATE:</span> FEB 27-28, 2026</span>
+          <span class="meta-divider">|</span>
+          <span class="meta-item"><span class="label">LOC:</span> DENVER, CO</span>
+          <span class="meta-divider">|</span>
+          <span class="meta-item"><span class="label">STATUS:</span> <span class="blink">ACCEPTING INVITES</span></span>
+        </div>
+        <div class="hero-cta">
+          <a href="mailto:admin@heatpunks.org" class="btn-primary">
+            <span class="btn-text">REQUEST INVITATION</span>
+            <span class="btn-heat"></span>
+          </a>
+          <a href="https://www.youtube.com/watch?v=c-NrYzmPRv8" target="_blank" class="btn-secondary">
+            WATCH 2025 RECAP
+          </a>
         </div>
       </div>
-    </Container>
-  </section>
-
-  <!-- Image Section -->
-  <section class="py-2 bg-gray-100">
-    <Container>
-      <div class="max-w-3xl mx-auto text-center">
-        <img src="/assets/events/heatpunk_summit_2026/thrasher_heatpunk.png" alt="Heatpunk Summit Logo" class="mx-auto max-w-full h-auto max-h-[300px] object-contain" loading="lazy" width="600" height="300" />
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
       </div>
-    </Container>
-  </section>
+    </section>
 
-  <!-- Summit Objectives Section -->
-  <section class="py-16 bg-gray-100">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-6 text-center">Summit Objectives</h2>
-    <div class="max-w-3xl mx-auto">
-      <ol class="list-decimal pl-8 mt-6 text-gray-700 space-y-3">
-        <li class="text-lg">Overcome challenges for mining in homes and businesses</li>
-        <li class="text-lg">Spark partnerships that accelerate product & services development</li>
-        <li class="text-lg">Network with hyper-focused builders</li>
-        <li class="text-lg">Continue learning and education to dismantle the proprietary mining empire</li>
-      </ol>
-    </div>
-    </Container>
-  </section>
-
-  <!-- Date & Location Section -->
-  <section class="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
-    <Container>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h2 class="text-3xl font-bold mb-4">Dates & Times</h2>
-          <ul class="list-disc pl-5 mt-4 space-y-2">
-            <li>Friday, February 27 – Saturday, February 28, 2026</li>
-            <li>Pre-Summit Ski Day & Evening Happy Hour - Thursday, February 26, 2026</li>
-            <li>Summit programming will start 10 AM MST Friday morning on the 27th. Feel free to arrive anytime after 8 AM for coffee and breakfast.</li>
-            <li>We'll conclude a full day of summit activities on Saturday afternoon around 3:00 PM MST.</li>
-          </ul>
+    <!-- QUICK STATS -->
+    <section class="stats-bar">
+      <div class="stats-container">
+        <div class="stat">
+          <span class="stat-value">2</span>
+          <span class="stat-label">DAYS</span>
         </div>
-        <div>
-          <h2 class="text-3xl font-bold mb-4">Location</h2>
-          <p class="mt-4">
-            The Space — Denver's Bitcoin Hub<br/>
-            3700 N Franklin St. Denver, CO
-          </p>
-          <ul class="list-disc pl-5 mt-4 space-y-2">
-            <li>Easily accessible from Denver International Airport via Train (no rental car required).</li>
-            <li>Ample accommodations nearby including hotels, restaurants, and bars within walking distance.</li>
-            <li>Located in the heart of Denver's RiNo (River North) district.</li>
-          </ul>
+        <div class="stat">
+          <span class="stat-value">50+</span>
+          <span class="stat-label">BUILDERS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">4</span>
+          <span class="stat-label">WORKSHOPS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">10+</span>
+          <span class="stat-label">DEMOS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">1</span>
+          <span class="stat-label">SKI DAY</span>
         </div>
       </div>
-    </Container>
-  </section>
+    </section>
 
-  <!-- Sponsor Deck Carousel -->
-  <section class="py-16 bg-white">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-6 text-center">About the Summit</h2>
-      <div class="carousel-container relative max-w-6xl mx-auto">
-        <div class="carousel-wrapper overflow-hidden rounded-lg shadow-lg">
-          <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="carousel-track">
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide1.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide2.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide3.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide4.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide5.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide6.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide7.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide8.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide9.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide10.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide11.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide12.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
-            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide13.png" alt="Heatpunk Summit 2026" class="carousel-image w-full flex-shrink-0 aspect-video object-contain bg-white" loading="lazy" />
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[001]</span>
+          <h2 class="section-title">WHAT IS HEATPUNK?</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-main">
+            <p class="about-lead">The Heatpunks are bitcoiners <span class="highlight">undermining the status-quo</span>, bringing hashrate back home into heating appliances and infrastructure.</p>
+            <p class="about-text">This summit brings together all key stakeholders pushing forward the emerging industry of hashrate heating. ASIC Designers, FOSS Developers, Firmware Builders, Control Experts, Heating Industry Veterans, Plumbers, HVAC Techs, Home Insurers, System Builders, Pleb Miners and more - <span class="highlight">All in the Same Room.</span></p>
           </div>
-        </div>
-        <button class="carousel-btn carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white p-3 rounded-full hover:bg-opacity-90 transition" onclick="moveCarousel(-1)">‹</button>
-        <button class="carousel-btn carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white p-3 rounded-full hover:bg-opacity-90 transition" onclick="moveCarousel(1)">›</button>
-        <div class="carousel-dots flex justify-center mt-4 space-x-2">
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(1)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(2)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(3)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(4)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(5)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(6)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(7)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(8)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(9)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(10)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(11)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(12)"></button>
-          <button class="dot w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition" onclick="currentSlide(13)"></button>
-        </div>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Schedule Section -->
-  <section class="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
-    <Container>
-      <h2 class="text-4xl font-bold mb-6 text-center">Schedule</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-lg">
-          The detailed event schedule will be emailed to attendees. General topics will include:
-        </p>
-        <ul class="list-disc pl-5 mt-4 space-y-2">
-          <li>Controlling Miners as Electric Heaters</li>
-          <li>Pools, Shares and Payouts for Intermitent Hashing</li>
-          <li>Sizing Hashrate for Heat Demand</li>
-          <li>Certifications, Building Code and Insurability. Heater or Miner?</li>
-          <li>Open Sourcing the Mining Stack</li>
-          <li>Penetrating the Heating Industry - The Tradesmen Perspective</li>
-          <li>Hashrate Makes the Smart Home Sovereign</li>
-          <li>Live Hardware Demonstrations</li>
-          <li>Cross-Industry Q&A</li>
-          <li>And More!</li>
-        </ul>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Why Attend & Who Should Attend -->
-  <section class="py-16 bg-gray-100">
-    <Container>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-black p-8 rounded-lg shadow-lg text-white">
-          <h2 class="text-3xl font-bold mb-4">Why Attend</h2>
-          <ul class="list-disc pl-5 mt-4 space-y-2">
-            <li><strong>See Hashrate Heating Innovation:</strong> New systems, products, software and live demonstrations</li>
-            <li><strong>Overcome Your Specific Challenge:</strong> Facing a hurdle with your mining heater or related business? Find the solution</li>
-            <li><strong>Connect with Hyper Focused Builders:</strong> The Heatpunk Summit is open to anyone pushing hashrate heating forward</li>
-          </ul>
-        </div>
-        <div class="bg-black p-8 rounded-lg shadow-lg text-white">
-          <h2 class="text-3xl font-bold mb-4">Who Should Attend</h2>
-          <ul class="list-disc pl-5 mt-4 space-y-2">
-            <li>ASIC Designers</li>
-            <li>FOSS Developers</li>
-            <li>Hashrate Heating System Builders</li>
-            <li>Pleb Miners</li>
-            <li>Heating Industry Contractors and Tradesmen</li>
-            <li>Building Regulators and Insurers</li>
-            <li>Energy Modelers</li>
-            <li>Control Experts</li>
-            <li>Mining Veterans seeking the Future of Hashrate</li>
-          </ul>
-        </div>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Event Highlights Section -->
-  <section class="py-16 bg-white">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-6 text-center">Event Highlights</h2>
-      <div class="max-w-3xl mx-auto">
-        <ul class="list-disc pl-8 mt-6 text-gray-700 space-y-3">
-          <li><strong>Rocky Mountain Ski Day:</strong> Come a day early for the heatpunk ski outing</li>
-          <li><strong>Hardware Demos:</strong> Innovative System Builders and Companies showcase their newest kit</li>
-          <li><strong>Panel Sessions:</strong> Cross-Industry Conversation, Expert Deep Dives and Q&A</li>
-          <li><strong>Community Meals & After-Party:</strong> Structured time to deepen relationships</li>
-          <li><strong>Live Launches:</strong> be first to see new product and company launches on stage</li>
-        </ul>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Workshops Section -->
-  <section class="py-16 bg-gray-100">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-6 text-center">2026 Workshops</h2>
-      <div class="max-w-3xl mx-auto">
-        <p class="text-xl text-gray-700 leading-relaxed text-center mb-8">
-          This year we're shaking things up. In addition to panels and presentations, the 2026 Heatpunk Summit features dedicated workshop sessions — pairing the right folks together to develop relationships and tackle challenges.
-        </p>
-        <div class="space-y-6">
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-bold text-black mb-2">Heatpunk Builder Feedback with Canaan</h3>
-            <p class="text-gray-700">If you've ever tinkered, hacked or modified a miner to be more useful for home heating — come chat directly with an ASIC manufacturer committed to home miners and tell them what you're looking for.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-bold text-black mb-2">Face Time with the Architects</h3>
-            <p class="text-gray-700">Commercial hashrate heating comes with a plethora of unique challenges — mainly certifications and regulations. If this is your expertise, or you are an ASIC miner manufacturer — come chat with leading architects who are committed to the mission.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-bold text-black mb-2">Bitcoin Boiler Breakdown with Hydronic Experts</h3>
-            <p class="text-gray-700">Hashrate heating your radiant floor or swimming pool isn't as simple as plugging in a water cooled miner to the intended application. Come learn best practices, rules of thumb and how bitcoin boilers may differ from traditional hardware.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-xl font-bold text-black mb-2">Dismantling the Proprietary Mining Empire with the 256 Foundation</h3>
-            <p class="text-gray-700">Curious how to start developing on the newly released FOSS mining stack? Ask the core developers themselves. They'll all be here.</p>
-          </div>
-        </div>
-        <p class="text-center text-gray-500 mt-8 italic">
-          More workshops to be announced.
-        </p>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Pricing & Get Involved -->
-  <section class="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
-    <Container>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-          <h2 class="text-3xl font-bold mb-4">Pricing</h2>
-          <ul class="list-disc pl-5 mt-4 space-y-2">
-            <li><strong class="text-2xl">General Admission</strong> – <span class="font-bold text-2xl">210,000 Sats</span></li>
-            <li><strong class="text-2xl">Member of The Space</strong> – <span class="font-bold text-2xl">50% Discount</span></li>
-          </ul>
-          <p class="mt-4">
-            Registration includes all sessions, meals, and the after-party. More info on the ski trip coming soon.
-          </p>
-        </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-          <h2 class="text-3xl font-bold mb-4">Interested in Getting Involved?</h2>
-          <div class="flex flex-col items-center space-y-4 mt-8">
-            <Link href="mailto:admin@heatpunks.org" target="_blank" style="primary" size="lg" class="hover:scale-105 transition-transform duration-300">
-              Contact Us for Sponsorships or Hardware Demonstrations
-            </Link>
-            <Link href="mailto:admin@heatpunks.org" target="_blank" style="primary" size="lg" class="hover:scale-105 transition-transform duration-300">
-              Did We Miss You? - Request Invitation
-            </Link>
+          <div class="about-objectives">
+            <h3 class="mini-header">&gt; OBJECTIVES</h3>
+            <ul class="objective-list">
+              <li><span class="bullet">01</span> Overcome challenges for mining in homes and businesses</li>
+              <li><span class="bullet">02</span> Spark partnerships that accelerate development</li>
+              <li><span class="bullet">03</span> Network with hyper-focused builders</li>
+              <li><span class="bullet">04</span> Dismantle the proprietary mining empire</li>
+            </ul>
           </div>
         </div>
       </div>
-    </Container>
-  </section>
+    </section>
 
-  <!-- Sponsors Section -->
-  <section class="py-16 bg-white">
-    <Container>
-      <h2 class="text-4xl font-bold text-black mb-10 text-center">Summit Sponsors</h2>
-      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 max-w-5xl mx-auto">
-        <a href="https://canaan.io" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
-          <img src="/assets/events/heatpunk_summit_2026/sponsors/canaa_logo.png" alt="Canaan" class="h-16 md:h-20 w-auto object-contain" />
-        </a>
-        <a href="https://ocean.xyz" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
-          <img src="/assets/events/heatpunk_summit_2026/sponsors/ocean_logo.png" alt="Ocean" class="h-16 md:h-20 w-auto object-contain" />
-        </a>
-        <a href="https://compassmining.io" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
-          <img src="/assets/events/heatpunk_summit_2026/sponsors/CM_Logo_Stacked_BlackTxt.png" alt="Compass Mining" class="h-16 md:h-20 w-auto object-contain" />
-        </a>
-        <a href="https://hrf.org" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
-          <img src="/assets/events/heatpunk_summit_2026/sponsors/Human_Rights_Foundation_logo.svg.png" alt="Human Rights Foundation" class="h-16 md:h-20 w-auto object-contain" />
-        </a>
-        <a href="https://tessere.com" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
-          <img src="/assets/events/heatpunk_summit_2026/sponsors/Tessere_logo.png" alt="Tessere" class="h-16 md:h-20 w-auto object-contain" />
-        </a>
-      </div>
-    </Container>
-  </section>
-
-  <!-- Closing Statement -->
-  <section class="py-16 bg-gray-100">
-    <Container>
-      <p class="text-3xl text-center text-black font-bold">
-        Undermine the status quo. The future of bitcoin mining is at home.
-      </p>
-    </Container>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="py-16 bg-black text-white">
-    <Container>
-      <h2 class="text-4xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div>
-          <p class="font-semibold text-lg">Is this only for mining experts?</p>
-          <p class="text-gray-400">No. Content is designed to bridge the gap between mining experts and other key stakeholders to make hashrate synonymous with electric heating.</p>
+    <!-- CAROUSEL -->
+    <section class="carousel-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[002]</span>
+          <h2 class="section-title">SUMMIT OVERVIEW</h2>
         </div>
-        <div>
-          <p class="font-semibold text-lg">Can I bring my heating system?</p>
-          <p class="text-gray-400">Yes! If you have hashrate heating tech you'd like to demo, please get in tough. We have spots for pool heating, radiant floors, furnace integration and space heater demos.</p>
-        </div>
-        <div>
-          <p class="font-semibold text-lg">Have other questions?</p>
-          <p class="text-gray-400">Shoot an email to the event organizers -> admin@heatpunks.org</p>
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carousel-track">
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide1.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide2.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide3.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide4.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide5.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide6.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide7.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide8.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide9.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide10.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide11.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide12.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+            <img src="/assets/events/heatpunk_summit_2026/sponsor_deck/Slide13.png" alt="Heatpunk Summit 2026" class="carousel-slide" loading="lazy" />
+          </div>
+          <button class="carousel-btn prev" onclick="moveCarousel(-1)">&larr;</button>
+          <button class="carousel-btn next" onclick="moveCarousel(1)">&rarr;</button>
+          <div class="carousel-dots">
+            {[...Array(13)].map((_, i) => (
+              <button class="dot" onclick={`currentSlide(${i + 1})`}></button>
+            ))}
+          </div>
         </div>
       </div>
-    </Container>
-  </section>
+    </section>
+
+    <!-- WHY + WHO -->
+    <section class="why-who">
+      <div class="section-container">
+        <div class="why-who-grid">
+          <div class="card why-card">
+            <h3 class="card-title"><span class="card-icon">&#9650;</span> WHY ATTEND</h3>
+            <ul class="card-list">
+              <li><strong>See Innovation:</strong> New systems, products, software and live demos</li>
+              <li><strong>Solve Challenges:</strong> Facing a hurdle? Find the solution here</li>
+              <li><strong>Connect:</strong> Meet hyper-focused builders pushing hashrate heating</li>
+            </ul>
+          </div>
+          <div class="card who-card">
+            <h3 class="card-title"><span class="card-icon">&#9679;</span> WHO ATTENDS</h3>
+            <div class="attendee-tags">
+              <span class="tag">ASIC Designers</span>
+              <span class="tag">FOSS Devs</span>
+              <span class="tag">System Builders</span>
+              <span class="tag">Pleb Miners</span>
+              <span class="tag">HVAC Techs</span>
+              <span class="tag">Plumbers</span>
+              <span class="tag">Insurers</span>
+              <span class="tag">Energy Modelers</span>
+              <span class="tag">Control Experts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS -->
+    <section class="workshops" id="workshops">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[003]</span>
+          <h2 class="section-title">2026 WORKSHOPS</h2>
+          <p class="section-desc">New this year: dedicated sessions pairing builders to tackle challenges together.</p>
+        </div>
+        <div class="workshop-grid">
+          <div class="workshop-card">
+            <div class="workshop-number">01</div>
+            <h4 class="workshop-title">Builder Feedback with Canaan</h4>
+            <p class="workshop-desc">Chat directly with an ASIC manufacturer committed to home miners. Tell them what you're looking for.</p>
+          </div>
+          <div class="workshop-card">
+            <div class="workshop-number">02</div>
+            <h4 class="workshop-title">Face Time with Architects</h4>
+            <p class="workshop-desc">Commercial hashrate heating challenges - certifications, regulations. Chat with leading architects.</p>
+          </div>
+          <div class="workshop-card">
+            <div class="workshop-number">03</div>
+            <h4 class="workshop-title">Bitcoin Boiler Breakdown</h4>
+            <p class="workshop-desc">Hydronic experts share best practices for radiant floors, pools, and how bitcoin boilers differ.</p>
+          </div>
+          <div class="workshop-card">
+            <div class="workshop-number">04</div>
+            <h4 class="workshop-title">FOSS Mining Stack with 256 Foundation</h4>
+            <p class="workshop-desc">Start developing on the newly released open source mining stack. Core devs will be here.</p>
+          </div>
+        </div>
+        <p class="workshop-more">+ More workshops to be announced</p>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="schedule" id="schedule">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[004]</span>
+          <h2 class="section-title">TOPICS</h2>
+        </div>
+        <div class="schedule-grid">
+          <div class="schedule-col">
+            <ul class="topic-list">
+              <li>Controlling Miners as Electric Heaters</li>
+              <li>Pools, Shares & Intermittent Hashing</li>
+              <li>Sizing Hashrate for Heat Demand</li>
+              <li>Certifications & Building Code</li>
+              <li>Open Sourcing the Mining Stack</li>
+            </ul>
+          </div>
+          <div class="schedule-col">
+            <ul class="topic-list">
+              <li>Penetrating the Heating Industry</li>
+              <li>Sovereign Smart Homes</li>
+              <li>Live Hardware Demonstrations</li>
+              <li>Cross-Industry Q&A</li>
+              <li>+ More announced via email</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[005]</span>
+          <h2 class="section-title">EVENT HIGHLIGHTS</h2>
+        </div>
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon">&#9968;</div>
+            <span>Rocky Mountain Ski Day</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">&#9881;</div>
+            <span>Hardware Demos</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">&#9733;</div>
+            <span>Live Product Launches</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">&#9787;</div>
+            <span>Panel Sessions</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">&#9832;</div>
+            <span>Community Meals</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">&#9835;</div>
+            <span>After Party</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="details" id="details">
+      <div class="section-container">
+        <div class="details-grid">
+          <div class="detail-card">
+            <h3 class="detail-title">&gt; WHEN</h3>
+            <p class="detail-text">
+              <strong>Feb 27-28, 2026</strong> (Fri-Sat)<br/>
+              Pre-Summit: Feb 26 - Ski Day + Happy Hour<br/>
+              Start: 10 AM MST (doors 8 AM)<br/>
+              End: ~3 PM MST Saturday
+            </p>
+          </div>
+          <div class="detail-card">
+            <h3 class="detail-title">&gt; WHERE</h3>
+            <p class="detail-text">
+              <strong>The Space - Denver's Bitcoin Hub</strong><br/>
+              3700 N Franklin St, Denver, CO<br/>
+              RiNo District - Train from DIA<br/>
+              Hotels, restaurants nearby
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[006]</span>
+          <h2 class="section-title">REGISTRATION</h2>
+        </div>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-tier">GENERAL</div>
+            <div class="price-amount">210,000 <span class="price-unit">SATS</span></div>
+            <p class="price-includes">Sessions + Meals + After Party</p>
+          </div>
+          <div class="price-card featured">
+            <div class="price-badge">MEMBER</div>
+            <div class="price-tier">THE SPACE</div>
+            <div class="price-amount">50% <span class="price-unit">OFF</span></div>
+            <p class="price-includes">All benefits at half price</p>
+          </div>
+        </div>
+        <div class="pricing-cta">
+          <a href="mailto:admin@heatpunks.org" class="btn-primary large">
+            <span class="btn-text">REQUEST INVITATION</span>
+            <span class="btn-heat"></span>
+          </a>
+          <a href="mailto:admin@heatpunks.org" class="btn-outline">SPONSOR / DEMO INQUIRY</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="community">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[007]</span>
+          <h2 class="section-title">JOIN THE COMMUNITY</h2>
+        </div>
+        <p class="community-desc">Connect with heatpunks worldwide. Share builds, ask questions, stay updated.</p>
+        <div class="community-links">
+          <a href="https://heatpunks.org" target="_blank" rel="noopener" class="community-link">
+            <span class="link-icon">&gt;_</span>
+            <span class="link-label">FORUM</span>
+            <span class="link-url">heatpunks.org</span>
+          </a>
+          <a href="https://x.com/HashHeatpunks" target="_blank" rel="noopener" class="community-link">
+            <span class="link-icon">𝕏</span>
+            <span class="link-label">X / TWITTER</span>
+            <span class="link-url">@HashHeatpunks</span>
+          </a>
+          <a href="https://t.me/heatpunks" target="_blank" rel="noopener" class="community-link">
+            <span class="link-icon">✈</span>
+            <span class="link-label">TELEGRAM</span>
+            <span class="link-url">t.me/heatpunks</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">[008]</span>
+          <h2 class="section-title">FAQ</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4 class="faq-q">&gt; Only for mining experts?</h4>
+            <p class="faq-a">No. Content bridges mining experts with other stakeholders to make hashrate synonymous with electric heating.</p>
+          </div>
+          <div class="faq-item">
+            <h4 class="faq-q">&gt; Can I bring my heating system?</h4>
+            <p class="faq-a">Yes! Demo spots available for pool heating, radiant floors, furnace integration, and space heaters. Contact us.</p>
+          </div>
+          <div class="faq-item">
+            <h4 class="faq-q">&gt; Other questions?</h4>
+            <p class="faq-a">Email: <a href="mailto:admin@heatpunks.org">admin@heatpunks.org</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+      <div class="manifesto-content">
+        <p class="manifesto-text">
+          <span class="manifesto-line">UNDERMINE THE STATUS QUO.</span>
+          <span class="manifesto-line accent">THE FUTURE OF BITCOIN MINING IS AT HOME.</span>
+        </p>
+      </div>
+      <div class="flame-bar"></div>
+    </section>
+  </div>
 </Layout>
 
 <style>
-  /* General Styling */
-  body {
-    font-family: 'Inter', sans-serif;
+  /* ========================================
+     HEATPUNK DESIGN SYSTEM
+     ======================================== */
+
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  :root {
+    --black: #0a0a0a;
+    --dark: #121212;
+    --dark-alt: #1a1a1a;
+    --gray: #2a2a2a;
+    --gray-light: #888;
+    --white: #f5f5f5;
+    --orange: #ff6b00;
+    --orange-light: #ff8c33;
+    --red: #ff3d00;
+    --green: #00ff41;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
   }
 
-  /* Hero Section */
-  section {
-    scroll-margin-top: 80px;
+  .heatpunk-page {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
   }
 
-  /* Carousel */
-  .carousel-container {
+  /* ========================================
+     UTILITIES
+     ======================================== */
+
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-mono);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .section-desc {
+    color: var(--gray-light);
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .highlight {
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  .noise-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  .scan-lines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.1) 2px,
+      rgba(0,0,0,0.1) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* ========================================
+     HERO
+     ======================================== */
+
+  .hero {
     position: relative;
-  }
-
-  .carousel-image {
-    object-fit: contain;
-  }
-
-  .carousel-btn {
-    z-index: 10;
-    font-size: 24px;
-    width: 48px;
-    height: 48px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    overflow: hidden;
   }
 
-  .dot.active {
-    background-color: #1f2937;
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 100%, rgba(255,107,0,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 20% 80%, rgba(255,61,0,0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 80% 80%, rgba(255,61,0,0.1) 0%, transparent 40%),
+      linear-gradient(180deg, var(--black) 0%, var(--dark) 100%);
+    animation: flameGlow 4s ease-in-out infinite;
   }
 
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .carousel-btn {
-      width: 36px;
-      height: 36px;
-      font-size: 20px;
-    }
+  @keyframes flameGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
 
-    .fixed.bottom-4.right-4 {
-      bottom: 2rem;
-      right: 2rem;
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+  }
+
+  .glitch-container {
+    position: relative;
+  }
+
+  .hero-title {
+    font-family: var(--font-mono);
+    font-size: clamp(3rem, 15vw, 8rem);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin: 0;
+    background: linear-gradient(135deg, var(--orange) 0%, var(--red) 50%, var(--orange-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 80px rgba(255,107,0,0.5);
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes textGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--white);
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--green);
+    letter-spacing: 0.2em;
+    margin-top: 1.5rem;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin-top: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray-light);
+  }
+
+  .meta-item .label {
+    color: var(--orange);
+  }
+
+  .meta-divider {
+    color: var(--gray);
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .meta-divider { display: inline; }
+  }
+
+  .blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .hero-cta {
+      flex-direction: row;
+      justify-content: center;
     }
+  }
+
+  .btn-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, var(--orange) 0%, var(--red) 100%);
+    color: var(--black);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(255,107,0,0.4);
+  }
+
+  .btn-primary .btn-heat {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .btn-primary:hover .btn-heat {
+    transform: translateX(100%);
+  }
+
+  .btn-primary.large {
+    padding: 1rem 2.5rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: 1px solid var(--gray);
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  .btn-outline {
+    padding: 0.875rem 2rem;
+    background: transparent;
+    color: var(--orange);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: 2px solid var(--orange);
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover {
+    background: var(--orange);
+    color: var(--black);
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.2em;
+    color: var(--gray-light);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--orange) 0%, transparent 100%);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; height: 40px; }
+    50% { opacity: 0.5; height: 30px; }
+  }
+
+  /* ========================================
+     STATS BAR
+     ======================================== */
+
+  .stats-bar {
+    background: var(--dark);
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    padding: 1rem 0;
+    overflow-x: auto;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    min-width: max-content;
+  }
+
+  @media (min-width: 768px) {
+    .stats-container { gap: 4rem; }
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--orange);
+  }
+
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.15em;
+    color: var(--gray-light);
+  }
+
+  /* ========================================
+     ABOUT
+     ======================================== */
+
+  .about {
+    background: var(--black);
+    padding: 4rem 0;
+  }
+
+  .about-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .about-lead {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+
+  .about-text {
+    color: var(--gray-light);
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  .mini-header {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--green);
+    letter-spacing: 0.1em;
+    margin: 0 0 1rem;
+  }
+
+  .objective-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .objective-list li {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-light);
+  }
+
+  .bullet {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: var(--orange);
+    flex-shrink: 0;
+  }
+
+  /* ========================================
+     CAROUSEL
+     ======================================== */
+
+  .carousel-section {
+    background: var(--dark);
+    padding: 4rem 0;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--gray);
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    width: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    background: white;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid var(--gray);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+  }
+
+  .carousel-btn:hover {
+    background: var(--orange);
+    color: var(--black);
+    border-color: var(--orange);
+  }
+
+  .carousel-btn.prev { left: 0.5rem; }
+  .carousel-btn.next { right: 0.5rem; }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--dark);
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gray);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .dot:hover, .dot.active {
+    background: var(--orange);
+  }
+
+  /* ========================================
+     WHY + WHO
+     ======================================== */
+
+  .why-who {
+    background: var(--black);
+    padding: 4rem 0;
+  }
+
+  .why-who-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .why-who-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .card {
+    background: var(--dark);
+    border: 1px solid var(--gray);
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .card-icon {
+    color: var(--orange);
+    font-size: 0.75rem;
+  }
+
+  .card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-list li {
+    font-size: 0.8125rem;
+    color: var(--gray-light);
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gray);
+  }
+
+  .card-list li strong {
+    color: var(--white);
+  }
+
+  .attendee-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    padding: 0.25rem 0.625rem;
+    background: var(--gray);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--white);
+    white-space: nowrap;
+  }
+
+  /* ========================================
+     WORKSHOPS
+     ======================================== */
+
+  .workshops {
+    background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
+    padding: 4rem 0;
+    position: relative;
+  }
+
+  .workshops::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  }
+
+  .workshop-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .workshop-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .workshop-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .workshop-card {
+    background: var(--dark-alt);
+    border: 1px solid var(--gray);
+    padding: 1.25rem;
+    transition: all 0.3s;
+  }
+
+  .workshop-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-2px);
+  }
+
+  .workshop-number {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .workshop-title {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+
+  .workshop-desc {
+    font-size: 0.75rem;
+    color: var(--gray-light);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .workshop-more {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray-light);
+    margin-top: 1.5rem;
+  }
+
+  /* ========================================
+     SCHEDULE
+     ======================================== */
+
+  .schedule {
+    background: var(--black);
+    padding: 4rem 0;
+  }
+
+  .schedule-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .schedule-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .topic-list li {
+    font-size: 0.8125rem;
+    color: var(--gray-light);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray);
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .topic-list li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-family: var(--font-mono);
+  }
+
+  /* ========================================
+     HIGHLIGHTS
+     ======================================== */
+
+  .highlights {
+    background: var(--dark);
+    padding: 4rem 0;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .highlights-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .highlights-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .highlight-item {
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+
+  .highlight-icon {
+    font-size: 1.5rem;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight-item span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+    color: var(--gray-light);
+  }
+
+  /* ========================================
+     DETAILS
+     ======================================== */
+
+  .details {
+    background: var(--black);
+    padding: 4rem 0;
+  }
+
+  .details-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .details-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .detail-card {
+    background: var(--dark);
+    border-left: 3px solid var(--orange);
+    padding: 1.25rem;
+  }
+
+  .detail-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--green);
+    margin: 0 0 0.75rem;
+  }
+
+  .detail-text {
+    font-size: 0.8125rem;
+    color: var(--gray-light);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .detail-text strong {
+    color: var(--white);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  /* ========================================
+     PRICING
+     ======================================== */
+
+  .pricing {
+    background: linear-gradient(180deg, var(--dark) 0%, var(--black) 100%);
+    padding: 4rem 0;
+    position: relative;
+  }
+
+  .pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  }
+
+  .pricing-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .pricing-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .price-card {
+    background: var(--dark-alt);
+    border: 1px solid var(--gray);
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .price-card.featured {
+    border-color: var(--orange);
+  }
+
+  .price-badge {
+    position: absolute;
+    top: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: var(--black);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .price-tier {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--gray-light);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-amount {
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .price-unit {
+    font-size: 0.875rem;
+    color: var(--orange);
+  }
+
+  .price-includes {
+    font-size: 0.75rem;
+    color: var(--gray-light);
+    margin: 0.5rem 0 0;
+  }
+
+  .pricing-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .pricing-cta {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  /* ========================================
+     COMMUNITY
+     ======================================== */
+
+  .community {
+    background: var(--black);
+    padding: 4rem 0;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+  }
+
+  .community-desc {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--gray-light);
+    text-align: center;
+    margin: 0 0 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .community-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .community-links {
+      flex-direction: row;
+      max-width: none;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  .community-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem;
+    background: var(--dark);
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .community-link:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .link-icon {
+    font-size: 1.5rem;
+    color: var(--green);
+    font-family: var(--font-mono);
+  }
+
+  .link-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .link-url {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gray-light);
+  }
+
+  .community-link:hover .link-url {
+    color: var(--green);
+  }
+
+  /* ========================================
+     FAQ
+     ======================================== */
+
+  .faq {
+    background: var(--dark);
+    padding: 4rem 0;
+  }
+
+  .faq-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 1rem;
+  }
+
+  .faq-q {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+  }
+
+  .faq-a {
+    font-size: 0.8125rem;
+    color: var(--gray-light);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .faq-a a {
+    color: var(--orange);
+  }
+
+  /* ========================================
+     MANIFESTO
+     ======================================== */
+
+  .manifesto {
+    background: var(--black);
+    padding: 4rem 0 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .manifesto-content {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .manifesto-text {
+    margin: 0;
+  }
+
+  .manifesto-line {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: clamp(0.875rem, 3vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+
+  .manifesto-line.accent {
+    color: var(--orange);
+    animation: textGlow 2s ease-in-out infinite;
+  }
+
+  .flame-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--red), var(--orange), var(--orange-light), var(--orange), var(--red));
+    background-size: 200% 100%;
+    animation: flameWave 3s linear infinite;
+  }
+
+  @keyframes flameWave {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
   }
 </style>
 
@@ -416,19 +1453,17 @@ import Link from "@components/ui/link.astro";
   function updateCarousel() {
     const track = document.getElementById('carousel-track');
     const dots = document.querySelectorAll('.dot');
-
-    track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-
+    if (track) {
+      track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+    }
     dots.forEach((dot, index) => {
       dot.classList.toggle('active', index === currentSlideIndex);
     });
   }
 
-  // Auto-rotate carousel every 5 seconds
-  setInterval(() => {
-    moveCarousel(1);
-  }, 5000);
+  // Auto-rotate carousel
+  setInterval(() => moveCarousel(1), 6000);
 
   // Initialize
-  updateCarousel();
+  document.addEventListener('DOMContentLoaded', updateCarousel);
 </script>
