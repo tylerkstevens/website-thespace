@@ -17,7 +17,7 @@ import Layout from '../layouts/Layout.astro';
               id="name"
               name="name"
               required
-              placeholder="Enter your answer"
+              placeholder="Satoshi Nakamoto"
               class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 placeholder:text-gray-300"
             />
           </div>
@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
               id="email"
               name="email"
               required
-              placeholder="Enter your answer"
+              placeholder="Enter your email"
               class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 placeholder:text-gray-300"
             />
           </div>
@@ -40,6 +40,7 @@ import Layout from '../layouts/Layout.astro';
               type="text"
               id="telegram"
               name="telegram"
+              placeholder="@username"
               class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
             />
           </div>
@@ -61,6 +62,7 @@ import Layout from '../layouts/Layout.astro';
               type="text"
               id="nostr"
               name="nostr"
+              placeholder="npub"
               class="mt-1 block w-full rounded-md border-2 border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
             />
           </div>
@@ -91,7 +93,7 @@ import Layout from '../layouts/Layout.astro';
                   value="networking_and_socialization"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Networking and socialization</span>
+                <span class="ml-2 text-sm">Education</span>
               </label>
               
               <label class="flex items-center">
@@ -101,7 +103,7 @@ import Layout from '../layouts/Layout.astro';
                   value="access_to_workspace"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Access to Workspace</span>
+                <span class="ml-2 text-sm">Collaboration</span>
               </label>
 
               <label class="flex items-center">
@@ -111,7 +113,7 @@ import Layout from '../layouts/Layout.astro';
                   value="attending_events"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Attending Events</span>
+                <span class="ml-2 text-sm">Networking</span>
               </label>
 
               <label class="flex items-center">
@@ -121,7 +123,7 @@ import Layout from '../layouts/Layout.astro';
                   value="learning_and_building"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Learning and Building</span>
+                <span class="ml-2 text-sm">Building</span>
               </label>
 
               <label class="flex items-center">
@@ -131,7 +133,7 @@ import Layout from '../layouts/Layout.astro';
                   value="collaboration_opportunities"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Collaboration Opportunities</span>
+                <span class="ml-2 text-sm">Community Involvement</span>
               </label>
 
               <label class="flex items-center">
@@ -147,7 +149,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div>
-            <label class="block text-sm font-medium">What services are you most interested in? (Select all that apply)*</label>
+            <label class="block text-sm font-medium">What are you most interested in? (Select all that apply)*</label>
             <div class="mt-2 space-y-2">
               <label class="flex items-center">
                 <input
@@ -156,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
                   value="coworking_or_hangout_space"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Coworking or hangout space</span>
+                <span class="ml-2 text-sm">Being a part of our mission</span>
               </label>
 
               <label class="flex items-center">
@@ -166,7 +168,7 @@ import Layout from '../layouts/Layout.astro';
                   value="dedicated_office_and_meeting_space"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Dedicated office and meeting space</span>
+                <span class="ml-2 text-sm">Group gatherings and collaboration</span>
               </label>
 
               <label class="flex items-center">
@@ -176,7 +178,7 @@ import Layout from '../layouts/Layout.astro';
                   value="events_seminars_and_workshops"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Events, seminars and workshops</span>
+                <span class="ml-2 text-sm">Events seminars and workshops</span>
               </label>
 
               <label class="flex items-center">
@@ -213,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
 
 
           <div>
-            <label class="block text-sm font-medium">What events are you interested in attending? (Select all that apply)*</label>
+            <label class="block text-sm font-medium">What educational events are you interested in attending? (Select all that apply)*</label>
             <div class="mt-2 space-y-2">
               <label class="flex items-center">
                 <input
@@ -222,7 +224,7 @@ import Layout from '../layouts/Layout.astro';
                   value="member_exclusive_social"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Member-exclusive social events</span>
+                <span class="ml-2 text-sm">Conferences and summits</span>
               </label>
 
               <label class="flex items-center">
@@ -242,7 +244,7 @@ import Layout from '../layouts/Layout.astro';
                   value="education_seminars"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Educational presentations and seminars</span>
+                <span class="ml-2 text-sm">Presentations and seminars</span>
               </label>
 
               <label class="flex items-center">
@@ -252,7 +254,7 @@ import Layout from '../layouts/Layout.astro';
                   value="bitcoin_only"
                   class="rounded border-2 border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
-                <span class="ml-2 text-sm">Bitcoin events only</span>
+                <span class="ml-2 text-sm">Casual bitcoin education</span>
               </label>
 
               <label class="flex items-center">
@@ -278,7 +280,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div>
-            <label for="other_interests" class="block text-sm font-medium">What other services, events, courses or amenities are you interested in The Space providing?</label>
+            <label for="other_interests" class="block text-sm font-medium">What other services, events, courses or amenities are you interested in helping the space provide?</label>
             <textarea
               id="other_interests"
               name="other_interests"
@@ -393,7 +395,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div>
-            <label for="bitcoin_competence" class="block text-sm font-medium">The Space is focused on Bitcoin only. No distractions. How would you describe your level of understanding of Bitcoin? *</label>
+            <label for="bitcoin_competence" class="block text-sm font-medium">The Space is focused on bitcoin and freedom tech only. No distractions. How would you describe your level of understanding of bitcoin? *</label>
             <select
               id="bitcoin_competence"
               name="bitcoin_competence"
@@ -430,7 +432,7 @@ import Layout from '../layouts/Layout.astro';
           </script>
         </div>
         <div>
-            <label for="contributions" class="block text-sm font-medium">How do you plan to contribute to our community and uphold our principles and values?</label>
+            <label for="contributions" class="block text-sm font-medium">How do you plan to contribute to our educational mission and uphold our principles and values?</label>
             <textarea
               id="contributions"
               name="contributions"
@@ -440,7 +442,7 @@ import Layout from '../layouts/Layout.astro';
             ></textarea>
           </div>
           <div>
-            <label for="existing_bitcoin_projects" class="block text-sm font-medium">Are you working on any Bitcoin project or ideas? Do you work for a Bitcoin company? Do you think The Space can help support your endeavor? Please describe.</label>
+            <label for="existing_bitcoin_projects" class="block text-sm font-medium">Are you working on any bitcoin project or ideas? Do you work for a bitcoin company? How can The Space can help what you're working on? How can what you're working on help The Space? Please describe.</label>
             <textarea
               id="existing_bitcoin_projects"
               name="existing_bitcoin_projects"
@@ -473,10 +475,9 @@ import Layout from '../layouts/Layout.astro';
                   style="margin-right: 10px; width: 16px !important; height: 16px !important; border-radius: 50% !important;"
                 />
                 <div>
-                  <span class="block font-medium">Social Membership ($150/mo)</span>
+                  <span class="block font-medium">Bitcoiner ($150/mo)</span>
                   <span class="block text-sm text-gray-600 mt-1">
-                    Access to building on weekdays after 4 PM and all weekend. Co-working: 5 drop-in days per month. 
-                    Bring a guest: 5 times a month.  See membership pricing page for more details.
+                    Campus access: 5 drop-in weekdays per month. Bring a guest when you come by. Unlimited weekend access. See membership pricing page for more details.
                   </span>
                 </div>
               </label>
@@ -491,9 +492,9 @@ import Layout from '../layouts/Layout.astro';
                   style="margin-right: 10px; width: 16px !important; height: 16px !important; border-radius: 50% !important;"
                 />
                 <div>
-                  <span class="block font-medium">Co-working Membership ($300/mo)</span>
+                  <span class="block font-medium">Hyper Bitcoiner ($300/mo)</span>
                   <span class="block text-sm text-gray-600 mt-1">
-                    24/7 building access. Unlimited co-working. Drop in anytime. Unlimited guest passes.  See membership pricing page for more details.
+                    24/7 campus access. Drop in anytime. Unlimited guest passes. See membership pricing page for more details.
                   </span>
                 </div>
               </label>
