@@ -6,16 +6,38 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Voting Membership",
+    name: "Bitcoiner",
     price: {
-      monthly: "$200/mo",
-      annual: "$2100",
+      monthly: "$150/mo",
+      annual: "$1800",
       discount: "0%",
-      original: "$200",
+      original: "$150",
     },
     popular: true,
     features: [
-    "Unlimited Building Access",
+    "Building Access on Weekends and 5 Weekdays/mo",
+    "Bring Guests When You Come",
+    "Vote in Board Elections",
+    "Private Voting Member Events",
+    "Community Leadership Opportunities",
+    "Contribute to our Educational Mission",
+    ],
+    button: {
+      text: "Apply for Membership",
+      link: "/membership-application",
+    },
+  }, 
+    {
+    name: "Hyper Bitcoiner",
+    price: {
+      monthly: "$300/mo",
+      annual: "$3600",
+      discount: "0%",
+      original: "$300",
+    },
+    popular: true,
+    features: [
+    "24/7 Campus Access",
     "Bring Guests with You Whenever",
     "Vote in Board Elections",
     "Private Voting Member Events",
@@ -39,8 +61,9 @@ const pricing = [
         <Fragment slot="desc"> What do you do in The Space? <br/>
         </Fragment>
       </Sectionhead>
-      <div class="grid md:grid-cols-1 gap-6 mx-auto max-w-2xl mt-12 mb-12 items-stretch h-full justify-center">
+      <div class="grid md:grid-cols-2 gap-6 mx-auto max-w-4xl mt-12 mb-12 items-stretch h-full justify-center">
         <PricingCard plan={pricing[0]} />
+        <PricingCard plan={pricing[1]} />
       </div>
       
       <!-- Day Pass Card - Compact Horizontal Design -->
