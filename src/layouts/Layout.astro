@@ -6,16 +6,20 @@ import "../styles/common.css";
 
 export interface Props {
   title: string;
+  image?: string;
+  description?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
+const { title, image, description } = Astro.props;
+
 const resolvedImageWithDomain = new URL(
-  "/opengraph.webp",
+  image || "/opengraph.webp",
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const pageDescription = description || "The Space is Denver's Premier Bitcoin community hub, event location, and coworking center.";
 
 const makeTitle = title
   ? title + " | " + "The Space"
@@ -36,7 +40,7 @@ const makeTitle = title
 
     <SEO
       title={makeTitle}
-      description="The Space is Denver's Premier Bitcoin community hub, event location, and coworking center."
+      description={pageDescription}
       canonical={canonicalURL}
       twitter={{
         creator: "@spacedenver",
