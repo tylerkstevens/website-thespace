@@ -1,5 +1,16 @@
 = local dev notes
 
+== startup
+
+-----
+$ export SPACE_SERVICES_API_URL=http://localhost:3000
+$ npm install
+$ npm run build
+$ npm run start
+-----
+
+== tests
+
 
 -----
 $ curl -X GET \

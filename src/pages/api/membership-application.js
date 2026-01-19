@@ -45,13 +45,13 @@ export const POST = async ({ request }) => {
     if (!application.name ||
         !application.email ||
         !application.preferred_contact_method ||
-        !application.primary_goals.length ||
-        !application.primary_services.length ||
-        !application.events.length ||
-        !application.core_values.length ||
+        !application.primary_goals?.length ||
+        !application.primary_services?.length ||
+        !application.events?.length ||
+        !application.core_values?.length ||
         !application.bitcoin_competence ||
         !application.membership_option ||
-        !application.space_awareness.length ||
+        !application.space_awareness?.length ||
         !application.consent) {
       return new Response(JSON.stringify({
         success: false,
